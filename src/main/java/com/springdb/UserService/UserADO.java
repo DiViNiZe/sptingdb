@@ -19,7 +19,7 @@ public class UserADO implements UserADOInterface{
 
   @Override
   public User getUserById(int id){
-    final String SQL = "SELECT id,firstname,lastname FROM db59060.users WHERE id = ?";
+    final String SQL = "SELECT id,first_name,last_name FROM db59060.users WHERE id = ?";
     return jdbcTemplate.queryForObject(SQL,new UserRowMapper(),id);
 
   }
